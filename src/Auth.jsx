@@ -65,6 +65,7 @@ const Auth = ({ insideRegister }) => {
       setEmail('');
       setIsBlocked(false)
       setLoggedIn(true);  
+      alert("Registered Successfully!!")
       navigate('/')
     } else {
       // Login

@@ -59,7 +59,18 @@ const UserList = () => {
     navigate('/add-user', { state: { userToUpdate, index } }); // Pass user data and index
   };
 
-  
+   // Function to display previous login history in an alert
+   const viewPreviousLogin = (user) => {
+    if (user.loginHistory && user.loginHistory.length > 0) {
+      const loginHistoryFormatted = user.loginHistory.map((login, index) => {
+        return `Login ${index + 1}: ${formatDate(login)}`;
+      }).join("\n");
+      alert(`Previous Logins:\n\n${loginHistoryFormatted}`);
+    } else {
+      alert("No previous logins available.");
+    }
+  };
+
   return (
     
    <>
@@ -123,7 +134,11 @@ const UserList = () => {
                   <button onClick={() => toggleUserStatus(index)} className="blockButton">
                     {user.active ? 'Block' : 'Unblock'}
                   </button>
-                  
+                  <button 
+                    onClick={() => viewPreviousLogin(user)} 
+                    className="loginsButton"
+                  > Previous Logins
+                  </button>
                   <button className="updateButton" onClick={() => handleUpdate(index)}>Update</button>
                   <button onClick={() => removeUser(index)} className="removeButton">Remove</button>
                 </td>
