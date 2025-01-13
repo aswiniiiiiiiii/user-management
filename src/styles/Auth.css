@@ -1,0 +1,81 @@
+.authorisation {
+    display: flex;
+    height: 100vh;
+  }
+  
+  /* first-container will hold the image */
+  .firstcontainer {
+    flex: 1;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; 
+  }
+  
+  .firstcontainer img {
+    max-width: 50%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  /* second-container will hold the form */
+  .second-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #fff; /* White background for a clean look */
+  }
+  
+  .second-container h1 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .second-container form {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .second-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .second-container input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .second-container input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* For buttons, adjust styles as needed */
+  .second-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .second-container button:hover {
+    background-color: #0056b3;
+  }
+  .options{
+    margin: 0 0px;
+  }
