@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import Auth from './Auth'
 import UserList from './UserList'
 import AddUser from './AddUser'
+import Pnf from './Pnf'
 
 function App() {
 
@@ -13,6 +14,8 @@ function App() {
         <Route path='/register'  element={<Auth insideRegister={true}/>}/>
         <Route path='/user-lists' element={<UserList/>}/>
         <Route path='/add-user' element={<AddUser/>}/>
+
+        <Route path='/*' element={<Pnf/>}/>
         </Routes>
     </>
   )
